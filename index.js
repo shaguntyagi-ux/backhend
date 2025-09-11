@@ -7,7 +7,9 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: "*"
+  origin: "*",           // sab frontend allow kar do
+  methods: "GET,POST",   // jo methods chahiye wo allow
+  credentials: true
 }));
 
 // Simple news route
